@@ -1,6 +1,7 @@
 {
   "name": "@my-namespace/simple-shared-data",
   "version": "0.0.0",
+  "private": true,
   "description": "> TODO: description",
   "author": "Alex Eagleson <alexeagleson@gmail.com>",
   "homepage": "https://github.com/alexeagleson/monorepo-example#readme",
@@ -13,10 +14,6 @@
   "files": [
     "lib"
   ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/alexeagleson/monorepo-example.git"
-  },
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
