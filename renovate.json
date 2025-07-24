@@ -7,7 +7,6 @@
   "npm": {
     "minimumReleaseAge": "3 days"
   },
-  "updateNotScheduled": false,
   "labels": [
     "⬆️ Dependencies"
   ],
