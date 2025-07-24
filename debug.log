@@ -25,7 +25,7 @@ DEBUG: validatePresets()
 DEBUG: Reinitializing hostRules for repo
 DEBUG: Clearing hostRules
  INFO: Repository started (repository=local)
-       "renovateVersion": "41.42.0"
+       "renovateVersion": "0.0.0-semantic-release"
 DEBUG: Using localDir: /Users/jporzucek/workdir/repos/github.com/jporzucek/monorepo-example (repository=local)
 DEBUG: PackageFiles.clear() - Package files deleted (repository=local)
 DEBUG: Resetting npmrc (repository=local)
@@ -45,7 +45,6 @@ DEBUG: Repository config (repository=local)
          "timezone": "Europe/London",
          "extends": ["config:recommended"],
          "npm": {"minimumReleaseAge": "3 days"},
-         "updateNotScheduled": false,
          "labels": ["⬆️ Dependencies"],
          "ignorePaths": ["**/node_modules/**"],
          "vulnerabilityAlerts": {
@@ -207,7 +206,7 @@ DEBUG: Found package-lock.json for package.json (repository=local)
 DEBUG: Found package-lock.json for packages/simple-express-server/package.json (repository=local)
 DEBUG: Found package-lock.json for packages/simple-shared-data/package.json (repository=local)
 DEBUG: manager extract durations (ms) (repository=local)
-       "managers": {"git-submodules": 0, "bun": 0, "renovate-config-presets": 2, "npm": 24}
+       "managers": {"git-submodules": 0, "bun": 0, "renovate-config-presets": 1, "npm": 26}
 DEBUG: Found npm package files (repository=local)
 DEBUG: Found 3 package file(s) (repository=local)
  INFO: Dependency extraction complete (repository=local)
@@ -241,7 +240,16 @@ DEBUG: Setting allowed version >= 1.8.2 to fix vulnerability GHSA-jr5f-v2jv-69x6
 DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
 DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
 DEBUG: hostRules: no authentication for registry.npmjs.org (repository=local)
+DEBUG: Using queue: host=registry.npmjs.org, concurrency=999 (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/lodash (etag=W/"95d3f20a52f9c275042c881d5fb40820", lastModified=Mon, 30 Jun 2025 15:00:07 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/@meshconnect%2Fweb-link-sdk (etag=W/"9093a042c1ad548a426a72b1e1fe4227", lastModified=Mon, 14 Jul 2025 13:33:00 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/@types%2Fexpress (etag=W/"0e96ccb01b00b6d4df74a2978e473888", lastModified=Sat, 07 Jun 2025 02:19:36 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/axios (etag=W/"35c39a070eac669668c43edd8b075e10", lastModified=Wed, 23 Jul 2025 06:05:18 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/lerna (etag=W/"6ce04c65ba26867ef9586daf792a6887", lastModified=Sun, 29 Jun 2025 17:34:01 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/@ledgerhq%2Fexchange-sdk (etag=W/"1dd8edac6e6a5a9c5c1dbbc79a2d3918", lastModified=Tue, 08 Jul 2025 09:16:39 GMT) (repository=local)
 DEBUG: Using vulnerabilityFixStrategy=lowest for axios (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/@types%2Flodash (etag=W/"b2e5259ed1058e76e394da84e8c2a130", lastModified=Tue, 01 Jul 2025 20:03:00 GMT) (repository=local)
+DEBUG: http cache: saving https://registry.npmjs.org/typescript (etag=W/"325a6dbe536824d242ecbd5611796d6a", lastModified=Thu, 24 Jul 2025 07:17:20 GMT) (repository=local)
 DEBUG: PackageFiles.add() - Package file saved for base branch (repository=local)
 DEBUG: Package releases lookups complete (repository=local)
 DEBUG: Repository libYears (repository=local)
@@ -765,35 +773,44 @@ DEBUG: packageFiles with updates (repository=local)
 DEBUG: detectSemanticCommits() (repository=local)
 DEBUG: semanticCommits: returning "disabled" from cache (repository=local)
 DEBUG: Repository timing splits (milliseconds) (repository=local)
-       "splits": {"init": 460, "extract": 200, "lookup": 5516},
-       "total": 6177
+       "splits": {"init": 556, "extract": 213, "lookup": 6519},
+       "total": 7289
 DEBUG: Package cache statistics (repository=local)
-       "get": {"count": 8, "avgMs": 128, "medianMs": 116, "maxMs": 317, "totalMs": 1020},
-       "set": {"count": 0, "avgMs": 0, "medianMs": 0, "maxMs": 0, "totalMs": 0}
+       "get": {"count": 8, "avgMs": 36, "medianMs": 45, "maxMs": 46, "totalMs": 284},
+       "set": {"count": 8, "avgMs": 124, "medianMs": 88, "maxMs": 515, "totalMs": 992}
 DEBUG: Datasource cache statistics (repository=local)
        "npm": {"https://registry.npmjs.org": {"hit": 0, "miss": 0, "set": 0, "skip": 8}}
 DEBUG: HTTP statistics (repository=local)
-       "hosts": {},
-       "requests": 0
+       "hosts": {
+         "registry.npmjs.org": {
+           "count": 8,
+           "reqAvgMs": 302,
+           "reqMedianMs": 237,
+           "reqMaxMs": 901,
+           "queueAvgMs": 0,
+           "queueMedianMs": 0,
+           "queueMaxMs": 1
+         }
+       },
+       "requests": 8
 DEBUG: HTTP cache statistics (repository=local)
        "https://registry.npmjs.org": {
-         "/@ledgerhq%2Fexchange-sdk": {"hit": 0, "miss": 0, "localHit": 1},
-         "/@meshconnect%2Fweb-link-sdk": {"hit": 0, "miss": 0, "localHit": 1},
-         "/@types%2Fexpress": {"hit": 0, "miss": 0, "localHit": 1},
-         "/@types%2Flodash": {"hit": 0, "miss": 0, "localHit": 1},
-         "/axios": {"hit": 0, "miss": 0, "localHit": 1},
-         "/lerna": {"hit": 0, "miss": 0, "localHit": 1},
-         "/lodash": {"hit": 0, "miss": 0, "localHit": 1},
-         "/typescript": {"hit": 0, "miss": 0, "localHit": 1}
+         "/@ledgerhq%2Fexchange-sdk": {"hit": 0, "miss": 1},
+         "/@meshconnect%2Fweb-link-sdk": {"hit": 0, "miss": 1},
+         "/@types%2Fexpress": {"hit": 0, "miss": 1},
+         "/@types%2Flodash": {"hit": 0, "miss": 1},
+         "/axios": {"hit": 0, "miss": 1},
+         "/lerna": {"hit": 0, "miss": 1},
+         "/lodash": {"hit": 0, "miss": 1},
+         "/typescript": {"hit": 0, "miss": 1}
        }
 DEBUG: Lookup statistics (repository=local)
-       "npm": {"count": 11, "avgMs": 214, "medianMs": 163, "maxMs": 610, "totalMs": 2352}
+       "npm": {"count": 11, "avgMs": 652, "medianMs": 432, "maxMs": 1931, "totalMs": 7175}
 DEBUG: Cache fallback URLs (repository=local)
        "count": 0,
        "hits": {}
  INFO: Repository finished (repository=local)
        "cloned": undefined,
-       "durationMs": 6177
+       "durationMs": 7289
 DEBUG: Checking file package cache for expired items
-DEBUG: Error count cleaning up cache: 1
-DEBUG: Deleted 0 of 498 file cached entries in 596ms
+DEBUG: Deleted 0 of 8 file cached entries in 14ms
