@@ -1,0 +1,799 @@
+DEBUG: Using RE2 regex engine
+DEBUG: Parsing configs
+DEBUG: No config file found on disk - skipping
+DEBUG: File config
+       "config": {}
+DEBUG: CLI config
+       "config": {"platform": "local"}
+DEBUG: Env config
+       "config": {"hostRules": [], "platform": "github", "token": "***********"}
+DEBUG: Resolved global extends
+       "config": undefined
+DEBUG: Combined config
+       "config": {"hostRules": [], "platform": "local", "token": "***********"}
+DEBUG: Enabling forkProcessing while in non-autodiscover mode
+DEBUG: Enabling onboardingNoDeps while in non-autodiscover mode
+DEBUG: Found valid git version: 2.39.5
+DEBUG: Setting global hostRules
+DEBUG: Using baseDir: /var/folders/s9/pl595z6d75q__fk6sj_mnpfw0000gq/T/renovate
+DEBUG: Using cacheDir: /var/folders/s9/pl595z6d75q__fk6sj_mnpfw0000gq/T/renovate/cache
+DEBUG: Using containerbaseDir: /var/folders/s9/pl595z6d75q__fk6sj_mnpfw0000gq/T/renovate/cache/containerbase
+DEBUG: Initializing Renovate internal cache into /var/folders/s9/pl595z6d75q__fk6sj_mnpfw0000gq/T/renovate/cache/renovate/renovate-cache-v1
+DEBUG: Commits limit = null
+DEBUG: Setting global hostRules
+DEBUG: validatePresets()
+DEBUG: Reinitializing hostRules for repo
+DEBUG: Clearing hostRules
+ INFO: Repository started (repository=local)
+       "renovateVersion": "41.42.0"
+DEBUG: Using localDir: /Users/jporzucek/workdir/repos/github.com/jporzucek/monorepo-example (repository=local)
+DEBUG: PackageFiles.clear() - Package files deleted (repository=local)
+DEBUG: Resetting npmrc (repository=local)
+DEBUG: Resetting npmrc (repository=local)
+DEBUG: checkOnboarding() (repository=local)
+DEBUG: isOnboarded() (repository=local)
+DEBUG: findFile(renovate.json) (repository=local)
+DEBUG: Got file list using git (repository=local)
+DEBUG: Config file exists, fileName: renovate.json (repository=local)
+DEBUG: Repo is onboarded (repository=local)
+DEBUG: Got file list using git (repository=local)
+DEBUG: Found renovate.json config file (repository=local)
+DEBUG: Repository config (repository=local)
+       "fileName": "renovate.json",
+       "config": {
+         "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+         "timezone": "Europe/London",
+         "extends": ["config:recommended"],
+         "npm": {"minimumReleaseAge": "3 days"},
+         "updateNotScheduled": false,
+         "labels": ["⬆️ Dependencies"],
+         "ignorePaths": ["**/node_modules/**"],
+         "vulnerabilityAlerts": {
+           "branchTopic": "{{{depNameSanitized}}}-{{{newMajor}}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}/{{packageFile}}",
+           "enabled": true
+         },
+         "prConcurrentLimit": 7,
+         "osvVulnerabilityAlerts": true
+       }
+DEBUG: migrateAndValidate() (repository=local)
+DEBUG: No config migration necessary (repository=local)
+DEBUG: Found repo ignorePaths (repository=local)
+       "ignorePaths": ["**/node_modules/**"]
+DEBUG: No vulnerability alerts found (repository=local)
+DEBUG: No baseBranches (repository=local)
+DEBUG: extract() (repository=local)
+DEBUG: Got file list using git (repository=local)
+DEBUG: Using file pattern: /(^|/)tasks/[^/]+\.ya?ml$/ for manager ansible (repository=local)
+DEBUG: Using file pattern: /(^|/)(galaxy|requirements)(\.ansible)?\.ya?ml$/ for manager ansible-galaxy (repository=local)
+DEBUG: Using file pattern: /(^|/)\.tool-versions$/ for manager asdf (repository=local)
+DEBUG: Using file pattern: /(^|/).azuredevops/.+\.ya?ml$/ for manager azure-pipelines (repository=local)
+DEBUG: Using file pattern: /azure.*pipelines?.*\.ya?ml$/ for manager azure-pipelines (repository=local)
+DEBUG: Using file pattern: /(^|/)batect(-bundle)?\.ya?ml$/ for manager batect (repository=local)
+DEBUG: Using file pattern: /(^|/)batect$/ for manager batect-wrapper (repository=local)
+DEBUG: Using file pattern: /(^|/)WORKSPACE(|\.bazel|\.bzlmod)$/ for manager bazel (repository=local)
+DEBUG: Using file pattern: /\.WORKSPACE\.bazel$/ for manager bazel (repository=local)
+DEBUG: Using file pattern: /\.bzl$/ for manager bazel (repository=local)
+DEBUG: Using file pattern: /(^|/|\.)MODULE\.bazel$/ for manager bazel-module (repository=local)
+DEBUG: Using file pattern: /(^|/)\.bazelversion$/ for manager bazelisk (repository=local)
+DEBUG: Using file pattern: /\.bicep$/ for manager bicep (repository=local)
+DEBUG: Using file pattern: /(^|/)\.?bitbucket-pipelines\.ya?ml$/ for manager bitbucket-pipelines (repository=local)
+DEBUG: Using file pattern: /(^|/)bitrise\.ya?ml$/ for manager bitrise (repository=local)
+DEBUG: Using file pattern: /buildkite\.ya?ml/ for manager buildkite (repository=local)
+DEBUG: Using file pattern: /\.buildkite/.+\.ya?ml$/ for manager buildkite (repository=local)
+DEBUG: Using file pattern: /(^|/)project\.toml$/ for manager buildpacks (repository=local)
+DEBUG: Using file pattern: /(^|/)bun\.lockb?$/ for manager bun (repository=local)
+DEBUG: Using file pattern: /(^|/)package\.json$/ for manager bun (repository=local)
+DEBUG: Using file pattern: /(^|/)\.bun-version$/ for manager bun-version (repository=local)
+DEBUG: Using file pattern: /(^|/)Gemfile$/ for manager bundler (repository=local)
+DEBUG: Using file pattern: /\.cake$/ for manager cake (repository=local)
+DEBUG: Using file pattern: /(^|/)Cargo\.toml$/ for manager cargo (repository=local)
+DEBUG: Using file pattern: /(^|/)\.circleci/.+\.ya?ml$/ for manager circleci (repository=local)
+DEBUG: Using file pattern: /(^|/)cloudbuild\.ya?ml/ for manager cloudbuild (repository=local)
+DEBUG: Using file pattern: /(^|/)Podfile$/ for manager cocoapods (repository=local)
+DEBUG: Using file pattern: /(^|/)([\w-]*)composer\.json$/ for manager composer (repository=local)
+DEBUG: Using file pattern: /(^|/)conanfile\.(txt|py)$/ for manager conan (repository=local)
+DEBUG: Using file pattern: /(^|/)\.copier-answers(\..+)?\.ya?ml/ for manager copier (repository=local)
+DEBUG: Using file pattern: /(^|/)cpanfile$/ for manager cpanfile (repository=local)
+DEBUG: Using file pattern: /(^|/)(?:deps|bb)\.edn$/ for manager deps-edn (repository=local)
+DEBUG: Using file pattern: /(^|/)devbox\.json$/ for manager devbox (repository=local)
+DEBUG: Using file pattern: /^.devcontainer/devcontainer.json$/ for manager devcontainer (repository=local)
+DEBUG: Using file pattern: /^.devcontainer.json$/ for manager devcontainer (repository=local)
+DEBUG: Using file pattern: /(^|/)(?:docker-)?compose[^/]*\.ya?ml$/ for manager docker-compose (repository=local)
+DEBUG: Using file pattern: /(^|/|\.)([Dd]ocker|[Cc]ontainer)file$/ for manager dockerfile (repository=local)
+DEBUG: Using file pattern: /(^|/)([Dd]ocker|[Cc]ontainer)file[^/]*$/ for manager dockerfile (repository=local)
+DEBUG: Using file pattern: /(^|/)\.drone\.yml$/ for manager droneci (repository=local)
+DEBUG: Using file pattern: /(^|/)fleet\.ya?ml/ for manager fleet (repository=local)
+DEBUG: Using file pattern: /(?:^|/)gotk-components\.ya?ml$/ for manager flux (repository=local)
+DEBUG: Using file pattern: /(^|/)\.fvm/fvm_config\.json$/ for manager fvm (repository=local)
+DEBUG: Using file pattern: /(^|/)\.fvmrc$/ for manager fvm (repository=local)
+DEBUG: Using file pattern: /(^|/)\.gitmodules$/ for manager git-submodules (repository=local)
+DEBUG: Using file pattern: /(^|/)(workflow-templates|\.(?:github|gitea|forgejo)/(?:workflows|actions))/.+\.ya?ml$/ for manager github-actions (repository=local)
+DEBUG: Using file pattern: /(^|/)action\.ya?ml$/ for manager github-actions (repository=local)
+DEBUG: Using file pattern: /\.gitlab-ci\.ya?ml$/ for manager gitlabci (repository=local)
+DEBUG: Using file pattern: /\.gitlab-ci\.ya?ml$/ for manager gitlabci-include (repository=local)
+DEBUG: Using file pattern: /(^|/)gleam.toml$/ for manager gleam (repository=local)
+DEBUG: Using file pattern: /(^|/)go\.mod$/ for manager gomod (repository=local)
+DEBUG: Using file pattern: /\.gradle(\.kts)?$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)gradle\.properties$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)gradle/.+\.toml$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)buildSrc/.+\.kt$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /\.versions\.toml$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)versions.props$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)versions.lock$/ for manager gradle (repository=local)
+DEBUG: Using file pattern: /(^|/)gradle/wrapper/gradle-wrapper\.properties$/ for manager gradle-wrapper (repository=local)
+DEBUG: Using file pattern: /\.cabal$/ for manager haskell-cabal (repository=local)
+DEBUG: Using file pattern: /(^|/)requirements\.ya?ml$/ for manager helm-requirements (repository=local)
+DEBUG: Using file pattern: /(^|/)values\.ya?ml$/ for manager helm-values (repository=local)
+DEBUG: Using file pattern: /(^|/)helmfile\.ya?ml(?:\.gotmpl)?$/ for manager helmfile (repository=local)
+DEBUG: Using file pattern: /(^|/)Chart\.ya?ml$/ for manager helmv3 (repository=local)
+DEBUG: Using file pattern: /(^|/)bin/hermit$/ for manager hermit (repository=local)
+DEBUG: Using file pattern: /^Formula/[^/]+[.]rb$/ for manager homebrew (repository=local)
+DEBUG: Using file pattern: /\.html?$/ for manager html (repository=local)
+DEBUG: Using file pattern: /(^|/)plugins\.(txt|ya?ml)$/ for manager jenkins (repository=local)
+DEBUG: Using file pattern: /(^|/)jsonnetfile\.json$/ for manager jsonnet-bundler (repository=local)
+DEBUG: Using file pattern: /^.+\.main\.kts$/ for manager kotlin-script (repository=local)
+DEBUG: Using file pattern: /(^|/)kustomization\.ya?ml$/ for manager kustomize (repository=local)
+DEBUG: Using file pattern: /(^|/)project\.clj$/ for manager leiningen (repository=local)
+DEBUG: Using file pattern: /(^|/|\.)pom\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /^(((\.mvn)|(\.m2))/)?settings\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /(^|/)\.mvn/extensions\.xml$/ for manager maven (repository=local)
+DEBUG: Using file pattern: /(^|\/).mvn/wrapper/maven-wrapper.properties$/ for manager maven-wrapper (repository=local)
+DEBUG: Using file pattern: /(^|/)package\.js$/ for manager meteor (repository=local)
+DEBUG: Using file pattern: /(^|/)Mintfile$/ for manager mint (repository=local)
+DEBUG: Using file pattern: /(^|/)\.?mise\.toml$/ for manager mise (repository=local)
+DEBUG: Using file pattern: /(^|/)\.?mise/config\.toml$/ for manager mise (repository=local)
+DEBUG: Using file pattern: /(^|/)mix\.exs$/ for manager mix (repository=local)
+DEBUG: Using file pattern: /(^|/)flake\.nix$/ for manager nix (repository=local)
+DEBUG: Using file pattern: /(^|/)\.node-version$/ for manager nodenv (repository=local)
+DEBUG: Using file pattern: /(^|/)package\.json$/ for manager npm (repository=local)
+DEBUG: Using file pattern: /(^|/)pnpm-workspace\.yaml$/ for manager npm (repository=local)
+DEBUG: Using file pattern: /\.(?:cs|fs|vb)proj$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /\.(?:props|targets)$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /(^|/)dotnet-tools\.json$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /(^|/)global\.json$/ for manager nuget (repository=local)
+DEBUG: Using file pattern: /(^|/)\.nvmrc$/ for manager nvm (repository=local)
+DEBUG: Using file pattern: /(^|/)src/main/features/.+\.json$/ for manager osgi (repository=local)
+DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager pep621 (repository=local)
+DEBUG: Using file pattern: /(^|/)[\w-]*requirements([-.]\w+)?\.(txt|pip)$/ for manager pip_requirements (repository=local)
+DEBUG: Using file pattern: /(^|/)setup\.py$/ for manager pip_setup (repository=local)
+DEBUG: Using file pattern: /(^|/)Pipfile$/ for manager pipenv (repository=local)
+DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager pixi (repository=local)
+DEBUG: Using file pattern: /(^|/)pixi\.toml$/ for manager pixi (repository=local)
+DEBUG: Using file pattern: /(^|/)pyproject\.toml$/ for manager poetry (repository=local)
+DEBUG: Using file pattern: /(^|/)\.pre-commit-config\.ya?ml$/ for manager pre-commit (repository=local)
+DEBUG: Using file pattern: /(^|/)pubspec\.ya?ml$/ for manager pub (repository=local)
+DEBUG: Using file pattern: /(^|/)Puppetfile$/ for manager puppet (repository=local)
+DEBUG: Using file pattern: /(^|/)\.python-version$/ for manager pyenv (repository=local)
+DEBUG: Using file pattern: renovate.json for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: renovate.json5 for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .github/renovate.json for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .github/renovate.json5 for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .gitlab/renovate.json for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .gitlab/renovate.json5 for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .renovaterc for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .renovaterc.json for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: .renovaterc.json5 for manager renovate-config-presets (repository=local)
+DEBUG: Using file pattern: /(^|/)\.ruby-version$/ for manager ruby-version (repository=local)
+DEBUG: Using file pattern: /(^|/)runtime.txt$/ for manager runtime-version (repository=local)
+DEBUG: Using file pattern: /\.sbt$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /project/[^/]*\.scala$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /project/build\.properties$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /(^|/)repositories$/ for manager sbt (repository=local)
+DEBUG: Using file pattern: /(^|/)\.scalafmt.conf$/ for manager scalafmt (repository=local)
+DEBUG: Using file pattern: /(^|/)setup\.cfg$/ for manager setup-cfg (repository=local)
+DEBUG: Using file pattern: /(^|/)Package\.swift/ for manager swift (repository=local)
+DEBUG: Using file pattern: /\.tf$/ for manager terraform (repository=local)
+DEBUG: Using file pattern: /(^|/)\.terraform-version$/ for manager terraform-version (repository=local)
+DEBUG: Using file pattern: /(^|/)terragrunt\.hcl$/ for manager terragrunt (repository=local)
+DEBUG: Using file pattern: /(^|/)\.terragrunt-version$/ for manager terragrunt-version (repository=local)
+DEBUG: Using file pattern: /\.tflint\.hcl$/ for manager tflint-plugin (repository=local)
+DEBUG: Using file pattern: /^\.travis\.ya?ml$/ for manager travis (repository=local)
+DEBUG: Using file pattern: **/ProjectSettings/ProjectVersion.txt for manager unity3d (repository=local)
+DEBUG: Using file pattern: /(^|/)\.vela\.ya?ml$/ for manager velaci (repository=local)
+DEBUG: Using file pattern: /(^|/)vendir\.yml$/ for manager vendir (repository=local)
+DEBUG: Using file pattern: /^\.woodpecker(?:/[^/]+)?\.ya?ml$/ for manager woodpecker (repository=local)
+DEBUG: Matched 3 file(s) for manager bun: package.json, packages/simple-express-server/package.json, packages/simple-shared-data/package.json (repository=local)
+DEBUG: No bun lockfiles found (repository=local)
+DEBUG: git-submodules is disabled (repository=local)
+DEBUG: Matched 3 file(s) for manager npm: package.json, packages/simple-express-server/package.json, packages/simple-shared-data/package.json (repository=local)
+DEBUG: Matched 1 file(s) for manager renovate-config-presets: renovate.json (repository=local)
+DEBUG: npm file package.json has name "monorepo-example" (repository=local)
+DEBUG: npm file packages/simple-express-server/package.json has name "@my-namespace/simple-express-server" (repository=local)
+DEBUG: npm file packages/simple-shared-data/package.json has name "@my-namespace/simple-shared-data" (repository=local)
+DEBUG: Detecting pnpm Workspaces (repository=local)
+DEBUG: Detecting workspaces (repository=local)
+DEBUG: Finding locked versions (repository=local)
+DEBUG: Found package-lock.json for package.json (repository=local)
+DEBUG: Found package-lock.json for packages/simple-express-server/package.json (repository=local)
+DEBUG: Found package-lock.json for packages/simple-shared-data/package.json (repository=local)
+DEBUG: manager extract durations (ms) (repository=local)
+       "managers": {"git-submodules": 0, "bun": 0, "renovate-config-presets": 2, "npm": 24}
+DEBUG: Found npm package files (repository=local)
+DEBUG: Found 3 package file(s) (repository=local)
+ INFO: Dependency extraction complete (repository=local)
+       "stats": {
+         "managers": {"npm": {"fileCount": 3, "depCount": 11}},
+         "total": {"fileCount": 3, "depCount": 11}
+       }
+DEBUG: fetchVulnerabilities() - osvVulnerabilityAlerts=true (repository=local)
+DEBUG: Vulnerability GHSA-wf5p-g6vw-rhxx affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-8hc4-vh64-cxmj affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-jr5f-v2jv-69x6 affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-wf5p-g6vw-rhxx affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-8hc4-vh64-cxmj affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-jr5f-v2jv-69x6 affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-wf5p-g6vw-rhxx affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-8hc4-vh64-cxmj affects axios 1.4.0 (repository=local)
+DEBUG: Vulnerability GHSA-jr5f-v2jv-69x6 affects axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.6.0 to fix vulnerability GHSA-wf5p-g6vw-rhxx in axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.7.4 to fix vulnerability GHSA-8hc4-vh64-cxmj in axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.8.2 to fix vulnerability GHSA-jr5f-v2jv-69x6 in axios 1.4.0 (repository=local)
+DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
+DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
+DEBUG: Setting allowed version >= 1.6.0 to fix vulnerability GHSA-wf5p-g6vw-rhxx in axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.7.4 to fix vulnerability GHSA-8hc4-vh64-cxmj in axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.8.2 to fix vulnerability GHSA-jr5f-v2jv-69x6 in axios 1.4.0 (repository=local)
+DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
+DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
+DEBUG: Setting allowed version >= 1.6.0 to fix vulnerability GHSA-wf5p-g6vw-rhxx in axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.7.4 to fix vulnerability GHSA-8hc4-vh64-cxmj in axios 1.4.0 (repository=local)
+DEBUG: Setting allowed version >= 1.8.2 to fix vulnerability GHSA-jr5f-v2jv-69x6 in axios 1.4.0 (repository=local)
+DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
+DEBUG: Error processing CVSS vector CVSS:4.0/AV:N/AC:L/AT:N/PR:N/UI:N/VC:H/VI:N/VA:N/SC:N/SI:N/SA:N/E:P (repository=local)
+DEBUG: hostRules: no authentication for registry.npmjs.org (repository=local)
+DEBUG: Using vulnerabilityFixStrategy=lowest for axios (repository=local)
+DEBUG: PackageFiles.add() - Package file saved for base branch (repository=local)
+DEBUG: Package releases lookups complete (repository=local)
+DEBUG: Repository libYears (repository=local)
+       "libYears": {"managers": {"npm": 19.145815734208522}, "total": 19.145815734208522},
+       "dependencyStatus": {"outdated": 7, "total": 8}
+DEBUG: branchifyUpgrades (repository=local)
+DEBUG: detectSemanticCommits() (repository=local)
+DEBUG: getCommitMessages (repository=local)
+DEBUG: semanticCommits: detected "unknown" (repository=local)
+DEBUG: semanticCommits: disabled (repository=local)
+DEBUG: 14 flattened updates found: axios, lerna, @ledgerhq/exchange-sdk, @ledgerhq/exchange-sdk, @meshconnect/web-link-sdk, axios, @types/express, @types/express, @types/lodash, typescript, typescript, axios, typescript, typescript (repository=local)
+DEBUG: Returning 11 branch(es) (repository=local)
+DEBUG: config.repoIsOnboarded=true (repository=local)
+DEBUG: packageFiles with updates (repository=local)
+       "config": {
+         "npm": [
+           {
+             "deps": [
+               {
+                 "depType": "dependencies",
+                 "depName": "axios",
+                 "currentValue": "1.4.0",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "lockedVersion": "1.4.0",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1.8.2",
+                     "newValue": "1.8.2",
+                     "releaseTimestamp": "2025-03-07T07:41:11.719Z",
+                     "newVersionAgeInDays": 139,
+                     "newMajor": 1,
+                     "newMinor": 8,
+                     "newPatch": 2,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 1.8585146817288178,
+                     "branchName": "renovate/axios-1.x/package.json"
+                   }
+                 ],
+                 "packageName": "axios",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/axios/axios",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://axios-http.com",
+                 "mostRecentTimestamp": "2025-07-23T06:05:16.520Z",
+                 "currentVersion": "1.4.0",
+                 "currentVersionTimestamp": "2023-04-27T23:05:52.716Z",
+                 "currentVersionAgeInDays": 818,
+                 "isSingleVersion": true,
+                 "fixedVersion": "1.4.0"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "lerna",
+                 "currentValue": "^4.0.0",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "lockedVersion": "4.0.0",
+                 "updates": [
+                   {
+                     "bucket": "major",
+                     "newVersion": "8.2.3",
+                     "newValue": "^8.0.0",
+                     "releaseTimestamp": "2025-06-29T17:33:26.670Z",
+                     "newVersionAgeInDays": 24,
+                     "newMajor": 8,
+                     "newMinor": 2,
+                     "newPatch": 3,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "isRange": true,
+                     "libYears": 4.380233874048706,
+                     "branchName": "renovate/major-lerna-monorepo"
+                   }
+                 ],
+                 "packageName": "lerna",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/lerna/lerna",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "sourceDirectory": "packages/lerna",
+                 "homepage": "https://lerna.js.org",
+                 "mostRecentTimestamp": "2025-06-29T17:33:26.670Z",
+                 "currentVersion": "4.0.0",
+                 "currentVersionTimestamp": "2021-02-10T22:42:31.218Z",
+                 "currentVersionAgeInDays": 1624,
+                 "isSingleVersion": false,
+                 "fixedVersion": "4.0.0"
+               }
+             ],
+             "extractedConstraints": {"npm": ">=7"},
+             "packageFileVersion": "1.0.0",
+             "managerData": {
+               "packageJsonName": "monorepo-example",
+               "hasPackageManager": false,
+               "workspaces": ["packages/*"],
+               "npmLock": "package-lock.json",
+               "yarnZeroInstall": false,
+               "workspacesPackages": ["packages/*"],
+               "npmrcFileName": null
+             },
+             "skipInstalls": true,
+             "packageFile": "package.json",
+             "lockFiles": ["package-lock.json"]
+           },
+           {
+             "deps": [
+               {
+                 "depType": "dependencies",
+                 "depName": "@ledgerhq/exchange-sdk",
+                 "currentValue": "0.3.2-2",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "lockedVersion": "0.3.2-2",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "0.7.7",
+                     "newValue": "0.7.7",
+                     "releaseTimestamp": "2024-08-23T12:35:55.480Z",
+                     "newVersionAgeInDays": 334,
+                     "newMajor": 0,
+                     "newMinor": 7,
+                     "newPatch": 7,
+                     "updateType": "minor",
+                     "isBreaking": true,
+                     "libYears": 0.54109765976017,
+                     "branchName": "renovate/ledgerhq-exchange-sdk-0.x"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "1.7.0",
+                     "newValue": "1.7.0",
+                     "releaseTimestamp": "2025-06-03T09:55:55.101Z",
+                     "newVersionAgeInDays": 50,
+                     "newMajor": 1,
+                     "newMinor": 7,
+                     "newPatch": 0,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "libYears": 1.317618158834348,
+                     "branchName": "renovate/ledgerhq-exchange-sdk-1.x"
+                   }
+                 ],
+                 "packageName": "@ledgerhq/exchange-sdk",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/LedgerHQ/exchange-sdk",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "mostRecentTimestamp": "2025-06-24T14:42:55.863Z",
+                 "currentVersion": "0.3.2-2",
+                 "currentVersionTimestamp": "2024-02-07T11:35:48.844Z",
+                 "currentVersionAgeInDays": 532,
+                 "isSingleVersion": true,
+                 "fixedVersion": "0.3.2-2"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "@meshconnect/web-link-sdk",
+                 "currentValue": "3.0.5",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "lockedVersion": "3.0.5",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "3.2.13",
+                     "newValue": "3.2.13",
+                     "releaseTimestamp": "2025-07-14T13:32:59.051Z",
+                     "newVersionAgeInDays": 9,
+                     "newMajor": 3,
+                     "newMinor": 2,
+                     "newPatch": 13,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "libYears": 0.8025829069951801,
+                     "branchName": "renovate/meshconnect-web-link-sdk-3.x"
+                   }
+                 ],
+                 "packageName": "@meshconnect/web-link-sdk",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/FrontFin/mesh-web-sdk",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "mostRecentTimestamp": "2025-07-14T13:32:59.051Z",
+                 "currentVersion": "3.0.5",
+                 "currentVersionTimestamp": "2024-09-24T14:55:24.496Z",
+                 "currentVersionAgeInDays": 302,
+                 "isSingleVersion": true,
+                 "fixedVersion": "3.0.5"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "axios",
+                 "currentValue": "1.7.4",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "lockedVersion": "1.4.0",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1.10.0",
+                     "newValue": "1.10.0",
+                     "releaseTimestamp": "2025-06-14T12:11:51.341Z",
+                     "newVersionAgeInDays": 39,
+                     "newMajor": 1,
+                     "newMinor": 10,
+                     "newPatch": 0,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "pendingVersions": ["1.11.0"],
+                     "libYears": 2.1302625134766617,
+                     "branchName": "renovate/axios-1.x"
+                   }
+                 ],
+                 "packageName": "axios",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/axios/axios",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://axios-http.com",
+                 "mostRecentTimestamp": "2025-07-23T06:05:16.520Z",
+                 "currentVersion": "1.4.0",
+                 "currentVersionTimestamp": "2023-04-27T23:05:52.716Z",
+                 "currentVersionAgeInDays": 818,
+                 "isSingleVersion": true,
+                 "fixedVersion": "1.4.0"
+               },
+               {
+                 "depType": "dependencies",
+                 "depName": "lodash",
+                 "currentValue": "^4.17.21",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "lockedVersion": "4.17.21",
+                 "updates": [],
+                 "packageName": "lodash",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/lodash/lodash",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://lodash.com/",
+                 "mostRecentTimestamp": "2021-02-20T15:42:16.891Z",
+                 "currentVersion": "4.17.21",
+                 "currentVersionTimestamp": "2021-02-20T15:42:16.891Z",
+                 "currentVersionAgeInDays": 1614,
+                 "fixedVersion": "4.17.21"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "@types/express",
+                 "currentValue": "^4.17.13",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "lockedVersion": "4.17.13",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.17.23",
+                     "newValue": "^4.17.13",
+                     "releaseTimestamp": "2025-06-07T02:19:33.740Z",
+                     "newVersionAgeInDays": 47,
+                     "newMajor": 4,
+                     "newMinor": 17,
+                     "newPatch": 23,
+                     "updateType": "patch",
+                     "isBreaking": false,
+                     "isRange": true,
+                     "isLockfileUpdate": true,
+                     "libYears": 3.9184357109018264,
+                     "branchName": "renovate/express-4.x-lockfile"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "5.0.3",
+                     "newValue": "^5.0.0",
+                     "releaseTimestamp": "2025-06-07T02:19:15.168Z",
+                     "newVersionAgeInDays": 47,
+                     "newMajor": 5,
+                     "newMinor": 0,
+                     "newPatch": 3,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "isRange": true,
+                     "libYears": 3.91843512198757,
+                     "branchName": "renovate/express-5.x"
+                   }
+                 ],
+                 "packageName": "@types/express",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "sourceDirectory": "types/express",
+                 "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/express",
+                 "currentVersion": "4.17.13",
+                 "currentVersionTimestamp": "2021-07-06T20:49:45.161Z",
+                 "currentVersionAgeInDays": 1478,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.17.13"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "@types/lodash",
+                 "currentValue": "^4.14.178",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "lockedVersion": "4.14.178",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.17.20",
+                     "newValue": "^4.14.178",
+                     "releaseTimestamp": "2025-07-01T20:02:53.216Z",
+                     "newVersionAgeInDays": 22,
+                     "newMajor": 4,
+                     "newMinor": 17,
+                     "newPatch": 20,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "isRange": true,
+                     "isLockfileUpdate": true,
+                     "libYears": 3.561302547532978,
+                     "branchName": "renovate/lodash-4.x-lockfile"
+                   }
+                 ],
+                 "packageName": "@types/lodash",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/DefinitelyTyped/DefinitelyTyped",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "sourceDirectory": "types/lodash",
+                 "homepage": "https://github.com/DefinitelyTyped/DefinitelyTyped/tree/master/types/lodash",
+                 "mostRecentTimestamp": "2025-07-01T20:02:53.216Z",
+                 "currentVersion": "4.14.178",
+                 "currentVersionTimestamp": "2021-12-08T23:02:16.077Z",
+                 "currentVersionAgeInDays": 1323,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.14.178"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "typescript",
+                 "currentValue": "^4.5.4",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "lockedVersion": "4.5.4",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.9.5",
+                     "newValue": "^4.5.4",
+                     "releaseTimestamp": "2023-01-30T21:05:37.231Z",
+                     "newVersionAgeInDays": 905,
+                     "newMajor": 4,
+                     "newMinor": 9,
+                     "newPatch": 5,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "isRange": true,
+                     "isLockfileUpdate": true,
+                     "libYears": 1.131420071949518,
+                     "branchName": "renovate/typescript-4.x-lockfile"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "5.8.3",
+                     "newValue": "^5.0.0",
+                     "releaseTimestamp": "2025-04-05T00:17:37.851Z",
+                     "newVersionAgeInDays": 110,
+                     "newMajor": 5,
+                     "newMinor": 8,
+                     "newPatch": 3,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "isRange": true,
+                     "libYears": 3.3071278541666667,
+                     "branchName": "renovate/typescript-5.x"
+                   }
+                 ],
+                 "packageName": "typescript",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/microsoft/TypeScript",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://www.typescriptlang.org/",
+                 "mostRecentTimestamp": "2025-07-24T07:17:17.488Z",
+                 "currentVersion": "4.5.4",
+                 "currentVersionTimestamp": "2021-12-13T21:51:13.842Z",
+                 "currentVersionAgeInDays": 1318,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.5.4"
+               }
+             ],
+             "extractedConstraints": {"npm": ">=7"},
+             "packageFileVersion": "1.0.0",
+             "managerData": {
+               "packageJsonName": "@my-namespace/simple-express-server",
+               "hasPackageManager": false,
+               "npmLock": "package-lock.json",
+               "yarnZeroInstall": false,
+               "workspacesPackages": ["packages/*"],
+               "npmrcFileName": null
+             },
+             "skipInstalls": true,
+             "packageFile": "packages/simple-express-server/package.json",
+             "lockFiles": ["package-lock.json"]
+           },
+           {
+             "deps": [
+               {
+                 "depType": "dependencies",
+                 "depName": "axios",
+                 "currentValue": "1.7.2",
+                 "datasource": "npm",
+                 "prettyDepType": "dependency",
+                 "lockedVersion": "1.4.0",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "1.10.0",
+                     "newValue": "1.10.0",
+                     "releaseTimestamp": "2025-06-14T12:11:51.341Z",
+                     "newVersionAgeInDays": 39,
+                     "newMajor": 1,
+                     "newMinor": 10,
+                     "newPatch": 0,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "pendingVersions": ["1.11.0"],
+                     "libYears": 2.1302625134766617,
+                     "branchName": "renovate/axios-1.x"
+                   }
+                 ],
+                 "packageName": "axios",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/axios/axios",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://axios-http.com",
+                 "mostRecentTimestamp": "2025-07-23T06:05:16.520Z",
+                 "currentVersion": "1.4.0",
+                 "currentVersionTimestamp": "2023-04-27T23:05:52.716Z",
+                 "currentVersionAgeInDays": 818,
+                 "isSingleVersion": true,
+                 "fixedVersion": "1.4.0"
+               },
+               {
+                 "depType": "devDependencies",
+                 "depName": "typescript",
+                 "currentValue": "^4.5.4",
+                 "datasource": "npm",
+                 "prettyDepType": "devDependency",
+                 "lockedVersion": "4.5.4",
+                 "updates": [
+                   {
+                     "bucket": "non-major",
+                     "newVersion": "4.9.5",
+                     "newValue": "^4.5.4",
+                     "releaseTimestamp": "2023-01-30T21:05:37.231Z",
+                     "newVersionAgeInDays": 905,
+                     "newMajor": 4,
+                     "newMinor": 9,
+                     "newPatch": 5,
+                     "updateType": "minor",
+                     "isBreaking": false,
+                     "isRange": true,
+                     "isLockfileUpdate": true,
+                     "libYears": 1.131420071949518,
+                     "branchName": "renovate/typescript-4.x-lockfile"
+                   },
+                   {
+                     "bucket": "major",
+                     "newVersion": "5.8.3",
+                     "newValue": "^5.0.0",
+                     "releaseTimestamp": "2025-04-05T00:17:37.851Z",
+                     "newVersionAgeInDays": 110,
+                     "newMajor": 5,
+                     "newMinor": 8,
+                     "newPatch": 3,
+                     "updateType": "major",
+                     "isBreaking": true,
+                     "isRange": true,
+                     "libYears": 3.3071278541666667,
+                     "branchName": "renovate/typescript-5.x"
+                   }
+                 ],
+                 "packageName": "typescript",
+                 "versioning": "npm",
+                 "warnings": [],
+                 "sourceUrl": "https://github.com/microsoft/TypeScript",
+                 "registryUrl": "https://registry.npmjs.org",
+                 "homepage": "https://www.typescriptlang.org/",
+                 "mostRecentTimestamp": "2025-07-24T07:17:17.488Z",
+                 "currentVersion": "4.5.4",
+                 "currentVersionTimestamp": "2021-12-13T21:51:13.842Z",
+                 "currentVersionAgeInDays": 1318,
+                 "isSingleVersion": true,
+                 "fixedVersion": "4.5.4"
+               }
+             ],
+             "extractedConstraints": {"npm": ">=7"},
+             "packageFileVersion": "0.0.0",
+             "managerData": {
+               "packageJsonName": "@my-namespace/simple-shared-data",
+               "hasPackageManager": false,
+               "npmLock": "package-lock.json",
+               "yarnZeroInstall": false,
+               "workspacesPackages": ["packages/*"],
+               "npmrcFileName": null
+             },
+             "skipInstalls": true,
+             "packageFile": "packages/simple-shared-data/package.json",
+             "lockFiles": ["package-lock.json"]
+           }
+         ]
+       }
+DEBUG: detectSemanticCommits() (repository=local)
+DEBUG: semanticCommits: returning "disabled" from cache (repository=local)
+DEBUG: Repository timing splits (milliseconds) (repository=local)
+       "splits": {"init": 460, "extract": 200, "lookup": 5516},
+       "total": 6177
+DEBUG: Package cache statistics (repository=local)
+       "get": {"count": 8, "avgMs": 128, "medianMs": 116, "maxMs": 317, "totalMs": 1020},
+       "set": {"count": 0, "avgMs": 0, "medianMs": 0, "maxMs": 0, "totalMs": 0}
+DEBUG: Datasource cache statistics (repository=local)
+       "npm": {"https://registry.npmjs.org": {"hit": 0, "miss": 0, "set": 0, "skip": 8}}
+DEBUG: HTTP statistics (repository=local)
+       "hosts": {},
+       "requests": 0
+DEBUG: HTTP cache statistics (repository=local)
+       "https://registry.npmjs.org": {
+         "/@ledgerhq%2Fexchange-sdk": {"hit": 0, "miss": 0, "localHit": 1},
+         "/@meshconnect%2Fweb-link-sdk": {"hit": 0, "miss": 0, "localHit": 1},
+         "/@types%2Fexpress": {"hit": 0, "miss": 0, "localHit": 1},
+         "/@types%2Flodash": {"hit": 0, "miss": 0, "localHit": 1},
+         "/axios": {"hit": 0, "miss": 0, "localHit": 1},
+         "/lerna": {"hit": 0, "miss": 0, "localHit": 1},
+         "/lodash": {"hit": 0, "miss": 0, "localHit": 1},
+         "/typescript": {"hit": 0, "miss": 0, "localHit": 1}
+       }
+DEBUG: Lookup statistics (repository=local)
+       "npm": {"count": 11, "avgMs": 214, "medianMs": 163, "maxMs": 610, "totalMs": 2352}
+DEBUG: Cache fallback URLs (repository=local)
+       "count": 0,
+       "hits": {}
+ INFO: Repository finished (repository=local)
+       "cloned": undefined,
+       "durationMs": 6177
+DEBUG: Checking file package cache for expired items
+DEBUG: Error count cleaning up cache: 1
+DEBUG: Deleted 0 of 498 file cached entries in 596ms
