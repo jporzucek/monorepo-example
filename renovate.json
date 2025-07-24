@@ -1,6 +1,23 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "timezone": "Europe/London",
   "extends": [
     "config:recommended"
-  ]
+  ],
+  "npm": {
+    "minimumReleaseAge": "3 days"
+  },
+  "updateNotScheduled": false,
+  "labels": [
+    "⬆️ Dependencies"
+  ],
+  "ignorePaths": [
+    "**/node_modules/**"
+  ],
+  "vulnerabilityAlerts": {
+    "branchTopic": "{{{depNameSanitized}}}-{{{newMajor}}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}/{{packageFile}}",
+    "enabled": true
+  },
+  "prConcurrentLimit": 7,
+  "osvVulnerabilityAlerts": true
 }
