@@ -5,17 +5,34 @@
     "config:recommended"
   ],
   "npm": {
+    "rangeStrategy": "bump",
     "minimumReleaseAge": "3 days"
   },
+  "updateNotScheduled": false,
   "labels": [
     "⬆️ Dependencies"
   ],
   "ignorePaths": [
-    "**/node_modules/**"
+    "**/node_modules/**",
+    "**/bower_components/**",
+    "**/vendor/**",
+    "**/example*/**",
+    "**/__fixtures__/**"
   ],
   "vulnerabilityAlerts": {
     "branchTopic": "{{{depNameSanitized}}}-{{{newMajor}}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}/{{packageFile}}",
-    "enabled": true
+    "reviewersFromCodeOwners": true,
+    "enabled": true,
+    "separateMajorMinor": true,
+    "separateMinorPatch": true,
+    "separateMultipleMajor": true,
+    "separateMultipleMinor": true,
+    "minimumReleaseAge": "",
+    "labels": [
+      "🔒 Security",
+      "Severity:{{#if (equals vulnerabilitySeverity '')}}UNKNOWN{{else}}{{vulnerabilitySeverity}}{{/if}}"
+    ],
+    "schedule": []
   },
   "prConcurrentLimit": 7,
   "osvVulnerabilityAlerts": true
