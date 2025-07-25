@@ -22,7 +22,7 @@
   "vulnerabilityAlerts": {
     "branchTopic": "{{{depNameSanitized}}}-{{{newMajor}}}{{#if separateMinorPatch}}{{#if isPatch}}.{{{newMinor}}}{{/if}}{{/if}}.x{{#if isLockfileUpdate}}-lockfile{{/if}}/{{packageFile}}",
     "reviewersFromCodeOwners": true,
-    "enabled": true,
+    "enabled": false,
     "separateMajorMinor": true,
     "separateMinorPatch": true,
     "separateMultipleMajor": true,
